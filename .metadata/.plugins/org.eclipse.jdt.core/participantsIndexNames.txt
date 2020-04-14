@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+E:\BYSJ\Student\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4161693889.index
+\Stu_Col\src
+E:\BYSJ\Student\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1257292880.index
+\Stu_Col\src

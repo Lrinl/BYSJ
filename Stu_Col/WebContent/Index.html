@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>学生成绩管理系统</title>
+<link rel="stylesheet" type="text/css" href="./css/mycss.css" />
+</head>
+<body background="image/1.jpg">
+	<div class="box">
+		<div class="login-box">
+			<div class="login-title">
+			<h1>
+			<small>学生成绩管理系统</small>
+			</h1>
+			</div>
+			<div class="login-content ">
+				<div class="form">
+					<form action="" method="post" id="form" name="login">
+					<div class="form-group">
+						<div class="col-xs-10 col-xs-offset-1">
+							<div class="input-group">
+								<span class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                                </span> 
+                                用户名：
+                                <input id="user" name="userId" class="form-control" >
+							</div>
+						</div>
+					</div>
+			<div class="form-group">
+				<div class="col-xs-10 col-xs-offset-1">
+					<div class="input-group">
+						<span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                        </span> 
+                        密&nbsp;&nbsp;&nbsp;   码：
+                        <input id="pwd" name="userPwd" type=password class="form-control" >
+                      
+					</div>
+				</div>
+			</div>
+              <br>
+			<div class="radio-group">
+				<input type="radio"name="rd" id="Admin" value="管理员" checked="checked">管理员		
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+				<input type="radio" name="rd" id="Stu" value="学生" >学生
+			</div>
+			
+				<div class="btn">
+					<input name="button" type="button" onclick="Admincheck()" value="登录" class="btn">
+				</div>
+			</div>
+					</form>
+			</div>
+			
+		</div>
+</div>
+</body>
+</html>
+<script language="javascript">
+function Admincheck()
+{
+	var form=document.getElementById("form");
+	var user=document.getElementById("user").value;
+	var pwd=document.getElementById("pwd").value;
+	if(document.getElementById("Admin").checked)
+		{
+			form.action="Login_1.jsp"
+			if(user.length==0 && pwd.length==0)
+			{
+				window.alert("用户名和密码不能为空！");
+				document.getElementById("user").focus(); 
+				return;
+			}
+		else if(user=="")
+			{
+				window.alert("用户名不能为空");
+				document.getElementById("user").focus(); 
+				return;
+			}
+		else if(pwd=="")
+			{
+				window.alert("密码不能为空");
+				document.getElementById("pwd").focus(); 
+				return;
+			}
+		else 
+			form.submit();
+		}
+	else
+		{
+		form.action="Login_2.jsp"
+			if(user.length==0 && pwd.length==0)
+			{
+				window.alert("用户名和密码不能为空！");
+				document.getElementById("user").focus(); 
+				return;
+			}
+		else if(user=="")
+			{
+				window.alert("用户名不能为空");
+				document.getElementById("user").focus(); 
+				return;
+			}
+		else if(pwd=="")
+			{
+				window.alert("密码不能为空");
+				document.getElementById("pwd").focus(); 
+				return;
+			}
+		else 
+			form.submit();
+		}
+	
+
+}
+</script>
